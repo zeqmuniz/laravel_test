@@ -8,6 +8,17 @@ use Illuminate\Support\Facades\View;
 class UserController extends Controller
 {
     //
+    
+    function UserHome(){
+        $name="sam";
+        $users=['anil','sam','peter'];
+        return view('home', ["name"=>$name, 'users'=>$users]);
+        
+    }
+}
+
+
+/* 
     function getUser(){
         //return "Este é o Ezequiel Muniz";
         return view('user');
@@ -24,8 +35,4 @@ class UserController extends Controller
         }
         
     }
-    function UserHome(){
-        return view('home');
-        
-    }
-}
+*/

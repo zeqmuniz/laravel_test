@@ -24,3 +24,16 @@
     <h2>other user</h2>
     @endif
 </div>
+
+<div>
+    @foreach($users as $user)
+    <h3>{{$user}}</h3>
+    @endforeach
+</div>
+
+<div>
+    @for($i=0;$i<=10;$i++)
+    <h4>{{$i}}</h4>
+    @endfor
+
+</div>

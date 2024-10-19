@@ -19,9 +19,11 @@ Route::get('/about/{name}', function ($name) {
     echo $name;
     return view('about', ["name"=>$name]);
 });
-*/
-//Route::view('admin', 'admin.login');
+
+Route::view('admin', 'admin.login');
 Route::get('user',[UserController::class,'getUser']);
 Route::get('user-about/{name}',[UserController::class,'UserAbout']);
 Route::get('admin-login',[UserController::class,'adminLogin']);
+*/
+Route::get('user-about',[UserController::class,'UserAbout']);
 Route::get('user-home',[UserController::class,'UserHome']);

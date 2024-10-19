@@ -1,4 +1,7 @@
-<h1>Arquivos Sobre</h1>
+<h1>
+    About page
+</h1>
+@include('common.inner', ["page"=>"this is abaut page"])
 
-<h2>Este é o Sr. {{$name}}</h2>
+
 

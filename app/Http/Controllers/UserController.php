@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\View;
 class UserController extends Controller
 {
     //
-    function getUser(){
+   /*  function getUser(){
         //return "Este é o Ezequiel Muniz";
         return view('user');
     }
@@ -23,6 +23,9 @@ class UserController extends Controller
             return "Esta View não foi encontrada";
         }
         
+    } */
+    function UserAbout(){
+        return view('about');
     }
     function UserHome(){
         return view('home');

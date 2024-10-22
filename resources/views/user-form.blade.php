@@ -1,34 +1,30 @@
-<div>
-    <h2>Add New User</h2>
+<div class="container">
+    
+
     <form action="addUser" method="post">
     @csrf
-        <div class="check">
-            <h4>User Skills</h4>
-            <input type="checkbox" name="skill[]" id="php" value="php">
+        <h2>Add New User</h2>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Enter User Name" name="username">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="text" placeholder="Enter User Email" name="email">
+        </div>
+        
+        <div class="input-wrapper">
+            <input type="text" placeholder="Enter User City" name="city">
+        </div>
+         
+        <div class="input-wrapper">
+            <h3>Skills</h3>
+            <input type="checkbox" name="skills" id="php" value="php">
             <label for="php">PHP</label>
-            <input type="checkbox" name="skill[]" id="java" value="java">
-            <label for="java">JAVA</label>
-            <input type="checkbox" name="skill[]" id="node" value="node">
-            <label for="node">NODE</label>
-        </div>
-        <div>
-            <h4>User Gender</h4>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="female" value="female">
-            <label for="female">Female</label>
-        </div>
-        <div>
-            <h4>User Age</h4>
-            <input type="range" name="age" id="age" max="100" min="18">
-        </div>
-        <div>
-            <h4>User City</h4>
-            <select name="city">
-                <option value="caragua">Caraguatatuba</option>
-                <option value="saoSeba">São Sebastião</option>
-                <option value="ubatuba">Ubatuba</option>
-            </select>
+            <input type="checkbox" name="skills" id="java" value="java">
+            <label for="java">Java</label>
+            <input type="checkbox" name="skills" id="node" value="node">
+            <label for="node">Node</label>
+
         </div>
         <div>
             <button>Add New User</button>
@@ -40,20 +36,42 @@
 </div>
 
 <style>
+    *{
+        margin:0;
+        padding:o;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }   
   
-    button{
+    input[type=text]{
+        border-radius: 4px;
+        box-shadow:1px 1px 2px #333333;
+        background: #cccccc;
         color: black;
-        border: 1px solid skyblue;
-        height: 35px;
-        width: 200px;
-        border-radius: 3px;
+        border: 1px solid #000000;
+        height: 35px;        
+        width: 300px;
         margin: 10px;
-        background-color: #fff;
-        cursor: pointer;
+        font-size: 1.5em;
     }
-    .check{
-        color: orange;
-        
+    input[type=text]:hover{
+        background: #ffffff;
+        border: 1px solid #990000;
+    }
 
+    button{
+        font-family: sans-serif;
+        font-size: 1.5em;
+        cursor: pointer;
+        background: #006699;
+        color:#ffffff;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
     }
+    
 </style>

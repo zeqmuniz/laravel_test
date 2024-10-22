@@ -27,3 +27,5 @@ Route::get('admin-login',[UserController::class,'adminLogin']);
 */
 Route::get('user-about',[UserController::class,'UserAbout']);
 Route::get('user-home',[UserController::class,'UserHome']);
+Route::get('user-form',[UserController::class,'UserForm']);
+Route::post('addUser',[UserController::class,'addUser']);

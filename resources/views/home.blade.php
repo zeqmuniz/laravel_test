@@ -5,6 +5,7 @@
 @include('common.header')
 
 <h1>Pagina Home</h1>
+<h2>Esta pagina esta em desenvolvimento</h2>
 <!-- @includeif('common.inner', ["page"=>"This is page home"]) -->
 
 <style>

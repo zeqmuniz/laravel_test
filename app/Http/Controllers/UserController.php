@@ -31,4 +31,15 @@ class UserController extends Controller
         return view('home');
         
     }
+    function UserForm(){
+        return view('user-form');
+        
+    }
+    function addUser(Request $request){
+        echo $request->username;
+        echo "<br>";
+        echo $request->city;
+        echo "<br>";
+        echo $request->email;
+    }
 }

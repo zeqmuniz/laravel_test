@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,3 +29,9 @@ Route::get('user-about/{name}',[UserController::class,'UserAbout']);
 Route::get('user-home',[UserController::class,'UserHome']);
 Route::get('user-form',[UserController::class,'UserForm']);
 Route::post('addUser',[UserController::class,'addUser']);
+
+Route::view('home/profile/user', 'home')->name('hm');
+Route::view('home/username/{name}','home')->name('user');
+
+Route::get('show',[HomeController::class,'show']);
+Route::get('user',[HomeController::class,'user']);
